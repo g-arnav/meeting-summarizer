@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 
-const API_URL = "https://meeting-summarizer-jwxx.onrender.com";
-const GOOGLE_CLIENT_ID = process.env.REACT_APP_GOOGLE_CLIENT_ID;
-const GOOGLE_API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
+// const API_URL = "https://meeting-summarizer-jwxx.onrender.com";
+const API_URL = "http://localhost:5001";
+const GOOGLE_CLIENT_ID = process.env.REACT_APP_GOOGLE_CLIENT_ID?.trim();
+const GOOGLE_API_KEY = process.env.REACT_APP_GOOGLE_API_KEY?.trim();
 
 export default function App() {
   const [text, setText] = useState("");
